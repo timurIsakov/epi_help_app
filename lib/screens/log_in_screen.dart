@@ -38,9 +38,15 @@ class _LogInScreenState extends State<LogInScreen> {
             "Log in with",
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
           ),
-          const SizedBox(height: 114),
+          const SizedBox(height: 100),
           ButtonWidget(
-              onPress: () {},
+              onPress: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginWithEmailScreen(),
+                    ));
+              },
               widget: const Text(
                 "PHONE NUMBER",
                 style: TextStyle(
@@ -51,12 +57,9 @@ class _LogInScreenState extends State<LogInScreen> {
           const SizedBox(height: 20),
           ButtonWidget(
             onPress: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginWithEmailScreen(),
-                  ));
+
             },
+            border: Border.all(color: Color(0xff73D13D),width: 2),
             color: Colors.white,
             widget: const Text(
               "E-MAIL",

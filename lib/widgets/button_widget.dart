@@ -7,6 +7,7 @@ class ButtonWidget extends StatelessWidget {
   final Widget widget;
   final Function() onPress;
   final double? borderRadius;
+  final Border? border;
 
   const ButtonWidget(
       {Key? key,
@@ -15,7 +16,7 @@ class ButtonWidget extends StatelessWidget {
       this.color,
       required this.widget,
       required this.onPress,
-      this.borderRadius})
+      this.borderRadius, this.border})
       : super(key: key);
 
   @override
@@ -29,10 +30,13 @@ class ButtonWidget extends StatelessWidget {
         height: height ?? 63,
         width: width ?? 374,
         decoration: BoxDecoration(
-          //color: color,
+          border: border,
+          color: color,
           borderRadius: BorderRadius.circular(borderRadius ?? 38),
-          gradient: const LinearGradient(
-              colors: [Color(0xffBAE637), Color(0xff73D13D)]),
+          gradient: color != null
+              ? null
+              : const LinearGradient(
+                  colors: [Color(0xffBAE637), Color(0xff73D13D)]),
         ),
         child: Center(child: widget),
       ),
