@@ -132,6 +132,8 @@ class _ReportEventScreenState extends State<ReportEventScreen> {
                           )
                         ],
                       ),
+
+
                     ],
                   ),
                 ),
