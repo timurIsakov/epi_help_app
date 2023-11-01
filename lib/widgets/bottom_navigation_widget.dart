@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../utils/bottom_navigation_entity.dart';
+import '../entity/bottom_navigation_entity.dart';
 
 class BottomNavigationItemWidget extends StatelessWidget {
   final BottomNavigationEntity entity;

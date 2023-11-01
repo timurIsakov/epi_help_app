@@ -1,8 +1,7 @@
 import 'package:epi_help_app/utils/asset.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../utils/content_card_entity.dart';
+import '../entity/content_card_entity.dart';
 import '../widgets/content_card_widget.dart';
 
 class ContentScreen extends StatefulWidget {

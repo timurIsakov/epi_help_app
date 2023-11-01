@@ -1,4 +1,4 @@
-import 'package:epi_help_app/utils/content_card_entity.dart';
+import 'package:epi_help_app/entity/content_card_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,9 +13,8 @@ class ContentCardWidget extends StatelessWidget {
       child: Container(
         height: 400.h,
         width: 374.w,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.r),
-          color: Colors.blueGrey
-        ),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.r), color: Colors.blueGrey),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           SizedBox(
             height: 225.h,

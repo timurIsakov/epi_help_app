@@ -56,10 +56,8 @@ class _LogInScreenState extends State<LogInScreen> {
               )),
           const SizedBox(height: 20),
           ButtonWidget(
-            onPress: () {
-
-            },
-            border: Border.all(color: Color(0xff73D13D),width: 2),
+            onPress: () {},
+            border: Border.all(color: const Color(0xff73D13D), width: 2),
             color: Colors.white,
             widget: const Text(
               "E-MAIL",

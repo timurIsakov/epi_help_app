@@ -27,6 +27,8 @@ class _TypeTriggerScreenState extends State<TypeTriggerScreen> {
 
   List<int> selectedList = [];
 
+  List<String> returnTypes = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,6 +67,7 @@ class _TypeTriggerScreenState extends State<TypeTriggerScreen> {
                         } else {
                           selectedList.add(localIndex);
                         }
+
                         setState(() {});
                       }),
                 );
@@ -76,7 +79,12 @@ class _TypeTriggerScreenState extends State<TypeTriggerScreen> {
                           fontSize: 16,
                           fontWeight: FontWeight.w800,
                           color: Colors.white)),
-                  onPress: () {})
+                  onPress: () {
+                    for (var element in selectedList) {
+                      returnTypes.add(listOfType[element]);
+                    }
+                    Navigator.pop(context, returnTypes);
+                  })
             ],
           ),
         ),

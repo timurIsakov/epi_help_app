@@ -1,8 +1,9 @@
 import 'package:epi_help_app/utils/asset.dart';
-import 'package:epi_help_app/utils/bottom_navigation_entity.dart';
+
 import 'package:epi_help_app/widgets/bottom_navigation_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../entity/bottom_navigation_entity.dart';
 import 'content_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {

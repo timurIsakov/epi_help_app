@@ -18,7 +18,7 @@ class _InputNumberFormWidgetState extends State<InputNumberFormWidget> {
 
     _textEditingController.addListener(() {
       setState(() {
-        isHasValue= _textEditingController.text.isNotEmpty;
+        isHasValue = _textEditingController.text.isNotEmpty;
       });
     });
   }
@@ -42,24 +42,24 @@ class _InputNumberFormWidgetState extends State<InputNumberFormWidget> {
         maxLength: 1,
         controller: _textEditingController,
         decoration: InputDecoration(
-
           focusedBorder: UnderlineInputBorder(
-            borderSide:   BorderSide(
+            borderSide: BorderSide(
               width: 10,
               color: isHasValue ? const Color(0xffF2F3F7) : Colors.grey,
             ),
             borderRadius: BorderRadius.circular(5),
           ),
-            counterText: "",
-            labelStyle: const TextStyle(
-                color: Colors.black, fontSize: 30, fontWeight: FontWeight.w600),
-            enabledBorder: UnderlineInputBorder(
-              borderSide:   BorderSide(
-                width: 10,
-                color: isHasValue ? const Color(0xffF2F3F7) : Colors.grey,
-              ),
-              borderRadius: BorderRadius.circular(5),
-            ),),
+          counterText: "",
+          labelStyle: const TextStyle(
+              color: Colors.black, fontSize: 30, fontWeight: FontWeight.w600),
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              width: 10,
+              color: isHasValue ? const Color(0xffF2F3F7) : Colors.grey,
+            ),
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
       ),
     );
   }

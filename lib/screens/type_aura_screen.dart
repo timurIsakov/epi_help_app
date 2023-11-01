@@ -1,6 +1,4 @@
-import 'package:epi_help_app/screens/settings_aura_screen.dart';
 import 'package:flutter/material.dart';
-
 import '../widgets/back_button_widget.dart';
 import '../widgets/button_widget.dart';
 import '../widgets/type_aura_widget.dart';
@@ -13,10 +11,7 @@ class TypeAuraScreen extends StatefulWidget {
   State<TypeAuraScreen> createState() => _TypeAuraScreenState();
 }
 
-
 class _TypeAuraScreenState extends State<TypeAuraScreen> {
-
-  
   List<String> listOfType = [
     "Sensory aura",
     "Auditory aura",
@@ -32,7 +27,6 @@ class _TypeAuraScreenState extends State<TypeAuraScreen> {
     setState(() {
       currentIndex = index;
     });
-  
   }
 
   @override
@@ -43,6 +37,7 @@ class _TypeAuraScreenState extends State<TypeAuraScreen> {
       currentIndex = listOfType.indexOf(widget.currentType);
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,13 +83,7 @@ class _TypeAuraScreenState extends State<TypeAuraScreen> {
                           fontWeight: FontWeight.w800,
                           color: Colors.white)),
                   onPress: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SettingsAuraScreen(
-                            type: listOfType[currentIndex],
-                          ),
-                        ));
+                    Navigator.pop(context, listOfType[currentIndex]);
                   })
             ],
           ),

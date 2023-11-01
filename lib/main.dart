@@ -1,4 +1,5 @@
 import 'package:epi_help_app/screens/bottom_navigation_screen.dart';
+import 'package:epi_help_app/screens/settings_aura_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const BottomNavigationScreen(),
+      child:  SettingsAuraScreen(type: "Other",),
     );
   }
 }
